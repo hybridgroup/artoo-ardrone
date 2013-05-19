@@ -4,4 +4,4 @@ source "http://rubygems.org"
 gemspec
 
 # these are for specific hardware, they have to be here for tests
-gem "hybridgroup-ardrone", "~> 1.3.0"
+gem "hybridgroup-argus"
