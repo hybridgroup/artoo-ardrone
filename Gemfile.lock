@@ -3,6 +3,7 @@ PATH
   specs:
     artoo-ardrone (0.1.0)
       artoo (~> 0.5.0)
+      hybridgroup-argus (~> 0.3.0)
 
 GEM
   remote: http://rubygems.org/
@@ -56,7 +57,6 @@ PLATFORMS
 
 DEPENDENCIES
   artoo-ardrone!
-  hybridgroup-argus
   minitest (~> 5.0)
   minitest-happy
   mocha (~> 0.14.0)
