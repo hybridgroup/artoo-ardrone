@@ -33,6 +33,10 @@ work do
 end
 ```
 
+## Connecting to ARDrone
+
+The ARDrone is a WiFi device, so there is no additional work to establish a connection to a single drone. However, in order to connect to multiple drones, you need to perform some configuration steps on each drone via SSH.
+
 ## Contributing
 
 1. Fork it
