@@ -20,7 +20,7 @@ module Artoo
       # @return [Boolean]
       def connect
         require 'argus' unless defined?(::Argus)
-        @ardrone = Argus::Drone.new(connect_to_udp, port.host, port.port)
+        @ardrone = Argus::Drone.new(socket: connect_to_udp, host: port.host, port: port.port)
         super
       end
 

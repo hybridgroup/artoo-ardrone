@@ -13,7 +13,7 @@ module Artoo
       # @return [Boolean]
       def connect
         require 'argus' unless defined?(::Argus)
-        @ardrone = Argus::VideoStreamer.new(connect_to_tcp, port.host, port.port)
+        @ardrone = Argus::VideoStreamer.new(socket: connect_to_tcp, host: port.host, post: port.port)
         @ardrone.start(connect_to_udp)
         super
       end
