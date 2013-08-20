@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/hybridgroup/argus.git
-  revision: 1fa2579e00262c535e5c7874bb09c18dffae9f06
-  branch: master
-  specs:
-    hybridgroup-argus (0.4.0)
-
 PATH
   remote: .
   specs:
@@ -34,6 +27,7 @@ GEM
       certified
       http_parser.rb
     http_parser.rb (0.5.3)
+    hybridgroup-argus (0.4.0)
     metaclass (0.0.1)
     method_source (0.8.2)
     minitest (5.0.1)
@@ -65,7 +59,6 @@ PLATFORMS
 
 DEPENDENCIES
   artoo-ardrone!
-  hybridgroup-argus!
   minitest (~> 5.0)
   minitest-happy
   mocha (~> 0.14.0)
