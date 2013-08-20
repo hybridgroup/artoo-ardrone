@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    artoo-ardrone (1.0.0)
-      artoo (~> 1.0.0.rc1)
-      hybridgroup-argus (~> 0.3.0)
+    artoo-ardrone (1.0.1)
+      artoo (~> 1.0.0)
+      hybridgroup-argus (~> 0.4.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    artoo (1.0.0.rc2)
+    artoo (1.0.0)
       celluloid (~> 0.14.1)
       celluloid-io (~> 0.14.1)
       multi_json (~> 1.6)
@@ -27,15 +27,15 @@ GEM
       certified
       http_parser.rb
     http_parser.rb (0.5.3)
-    hybridgroup-argus (0.3.0)
+    hybridgroup-argus (0.4.0)
     metaclass (0.0.1)
-    method_source (0.8.1)
+    method_source (0.8.2)
     minitest (5.0.1)
     minitest-happy (1.0.0)
     mocha (0.14.0)
       metaclass (~> 0.0.1)
-    multi_json (1.7.7)
-    nio4r (0.4.6)
+    multi_json (1.7.9)
+    nio4r (0.5.0)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
