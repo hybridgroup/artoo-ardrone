@@ -10,8 +10,8 @@ module Artoo
       # Creates connection with Argus NavStreamer and starts ardrone device
       # @return [Boolean]
       def connect
-        require 'argus' unless defined?(::Argus)
-        @ardrone = Argus::NavStreamer.new(socket: connect_to_udp, host: port.host, port: port.port.to_i)
+        require 'argus' unless defined?(Argus)
+        @ardrone = Argus::NavStreamer.new(socket: connect_to_udp, remote_host: port.host, port: port.port.to_i)
         @ardrone.start
         super
       end

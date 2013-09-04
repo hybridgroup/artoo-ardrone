@@ -1,9 +1,15 @@
+GIT
+  remote: https://github.com/jimweirich/argus.git
+  revision: 91aa4f7d53983eaa46c5201d6d83ef8ae4f3c734
+  specs:
+    argus (0.0.0)
+
 PATH
   remote: .
   specs:
     artoo-ardrone (1.0.2.pre)
+      argus
       artoo (~> 1.1.0.pre)
-      hybridgroup-argus (~> 0.4.0)
 
 GEM
   remote: http://rubygems.org/
@@ -16,10 +22,10 @@ GEM
       rake (~> 10.0)
       reel (~> 0.4.0.pre)
       thor (~> 0.18.1)
-    celluloid (0.15.0.pre2)
-      timers (>= 1.0.0)
-    celluloid-io (0.15.0.pre2)
-      celluloid (>= 0.15.0.pre)
+    celluloid (0.15.0)
+      timers (~> 1.1.0)
+    celluloid-io (0.15.0)
+      celluloid (>= 0.15.0)
       nio4r (>= 0.5.0)
     certified (0.1.1)
     coderay (1.0.9)
@@ -27,7 +33,6 @@ GEM
       certified
       http_parser.rb
     http_parser.rb (0.5.3)
-    hybridgroup-argus (0.4.0)
     metaclass (0.0.1)
     method_source (0.8.2)
     minitest (5.0.1)
@@ -58,6 +63,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  argus!
   artoo-ardrone!
   minitest (~> 5.0)
   minitest-happy

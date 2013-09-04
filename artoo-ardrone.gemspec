@@ -20,7 +20,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency 'artoo', '~> 1.1.0.pre'
-  s.add_runtime_dependency 'hybridgroup-argus', '~> 0.4.0'
+  #s.add_runtime_dependency 'argus', '~> 0.3.0'
+  s.add_runtime_dependency 'argus'
   s.add_development_dependency 'minitest', '~> 5.0'
   s.add_development_dependency 'minitest-happy'
   s.add_development_dependency 'mocha', '~> 0.14.0'
