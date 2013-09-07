@@ -2,13 +2,13 @@ PATH
   remote: .
   specs:
     artoo-ardrone (1.0.2)
-      argus (~> 0.3.0)
+      argus (~> 0.4.0)
       artoo (~> 1.1.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    argus (0.3.0)
+    argus (0.4.0)
     artoo (1.1.0)
       celluloid (~> 0.15.0)
       celluloid-io (~> 0.15.0)

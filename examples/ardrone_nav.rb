@@ -7,7 +7,7 @@ connection :navigation, :adaptor => :ardrone_navigation, :port => '192.168.1.1:5
 device :nav, :driver => :ardrone_navigation, :connection => :navigation
 
 work do
-  on nav, :update => :nav_update
+  on nav, :navdata => :nav_update
   drone.start
   drone.take_off
   
