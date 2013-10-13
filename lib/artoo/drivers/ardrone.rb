@@ -11,6 +11,21 @@ module Artoo
 
       def start
         connection.start(false) # send false, so Argus does not use NavMonitor
+        disable_emergency
+      end
+
+      def enable_emergency
+        connection.enable_emergency
+        after(1) do
+          connection.enable_emergency(false)
+        end
+      end
+
+      def disable_emergency
+        connection.disable_emergency
+        after(1) do
+          connection.disable_emergency(false)
+        end
       end
     end
   end

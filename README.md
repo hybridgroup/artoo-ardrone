@@ -37,6 +37,8 @@ end
 
 The ARDrone is a WiFi device, so there is no additional work to establish a connection to a single drone. However, in order to connect to multiple drones, you need to perform some configuration steps on each drone via SSH.
 
+PLEASE NOTE: When you first connect to the ARDrone by calling the `start` method, if it is in "emergency" mode, Artoo will automatically reset it back "normal" mode, to be able to fly.
+
 ## Contributing
 
 1. Fork it
