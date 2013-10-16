@@ -24,11 +24,11 @@ module Artoo
 
           case
           when opt.is_a?(Argus::NavOptionDemo)
-            publish(event_topic_name("update"), "navdata", "demo", n, opt)
+            publish(event_topic_name("update"), "navdata_demo", n, opt)
             publish(event_topic_name("demo"), n, opt)
 
           when opt.is_a?(Argus::NavOptionVisionDetect)
-            publish(event_topic_name("update"), "navdata", "vision_detect", n, opt)
+            publish(event_topic_name("update"), "navdata_vision_detect", n, opt)
             publish(event_topic_name("vision_detect"), n, opt)
 
           end
