@@ -4,4 +4,4 @@ source "http://rubygems.org"
 gemspec
 
 # uncomment the following line for local development:
-gem 'hybridgroup-argus', :path => '~/Development/argus'
+#gem 'hybridgroup-argus', :path => '~/Development/argus'
