@@ -9,11 +9,28 @@ module Artoo
                   :front_camera, :bottom_camera, :up, :down, :left, :right, 
                   :forward, :backward, :turn_left, :turn_right, :reset_watchdog, :led].freeze
 
-      def start
+      def start(nav=nil)
         connection.start(false) # send false, so Argus does not use NavMonitor
-        connection.disable_emergency
-        after(1) do
-          connection.disable_emergency(false)
+
+        if nav
+          start_with_nav(nav)
+        else
+          publish(event_topic_name("ready"))
+        end
+      end
+
+      def start_with_nav(nav)
+        until !nav.emergency_landing?.nil?
+          sleep 0.1
+        end
+
+        if nav.emergency_landing?
+          connection.disable_emergency
+          after(1) do
+            connection.disable_emergency(false)
+            publish(event_topic_name("ready"))
+          end
+        else
           publish(event_topic_name("ready"))
         end
       end

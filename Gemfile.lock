@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    artoo-ardrone (1.1.0)
+    artoo-ardrone (1.2.0)
       artoo (>= 1.3.0)
       hybridgroup-argus (>= 0.4.0)
 

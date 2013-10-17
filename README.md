@@ -19,17 +19,19 @@ gem install artoo-ardrone
 ## Using
 
 ```ruby
-require 'artoo'
 
-connection :ardrone, :adaptor => :ardrone, :port => '192.168.0.43:5556'
+connection :ardrone, :adaptor => :ardrone
 device :drone, :driver => :ardrone, :connection => :ardrone
 
 work do
+  on drone, :ready => :fly
   drone.start
+end
+
+def fly(*data)
   drone.take_off
-  
-  after(25.seconds) { drone.hover.land }
-  after(30.seconds) { drone.stop }
+  after(15.seconds) { drone.hover.land }
+  after(20.seconds) { drone.stop }
 end
 ```
 
