@@ -8,7 +8,7 @@ work do
   drone.start
 end
 
-def fly
+def fly(*data)
   drone.take_off
   after(15.seconds) { drone.hover.land }
   after(20.seconds) { drone.stop }

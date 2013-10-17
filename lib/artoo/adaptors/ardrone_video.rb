@@ -12,9 +12,8 @@ module Artoo
       # Argus PaVE Parser starting a stream with ardrone device
       # @return [Boolean]
       def connect
-        require 'argus' unless defined?(Argus)
-        require 'argus'
-        @ardrone = Argus::VideoStreamer.new(socket: connect_to_tcp, host: port.host, post: port.port)
+        require 'argus' unless defined?(::Argus::VideoStreamer)
+        @ardrone = ::Argus::VideoStreamer.new(socket: connect_to_tcp, host: port.host, post: port.port)
         @ardrone.start(connect_to_udp)
         super
       end

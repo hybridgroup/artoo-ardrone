@@ -8,9 +8,9 @@ work do
   drone.start
 end
 
-def fly
+def fly(*data)
   drone.take_off
   after(15.seconds) { drone.animate(:turnaround, 15) }
-  after(35.seconds) { drone.hover.land }
-  after(40.seconds) { drone.stop }
+  after(30.seconds) { drone.hover.land }
+  after(35.seconds) { drone.stop }
 end

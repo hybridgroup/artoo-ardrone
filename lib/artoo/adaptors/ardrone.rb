@@ -19,8 +19,8 @@ module Artoo
       # Creates Argus Drone connection with device
       # @return [Boolean]
       def connect
-        require 'argus' unless defined?(Argus)
-        @ardrone = Argus::Drone.new(socket: connect_to_udp, host: port.host, port: port.port)
+        require 'argus' unless defined?(::Argus::Drone)
+        @ardrone = ::Argus::Drone.new(socket: connect_to_udp, host: port.host, port: port.port)
         super
       end
 
