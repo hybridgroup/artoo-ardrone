@@ -7,7 +7,7 @@ module Artoo
     class Ardrone < Driver
       COMMANDS = [:start, :stop, :hover, :land, :take_off, :enable_emergency, :disable_emergency,
                   :front_camera, :bottom_camera, :up, :down, :left, :right, 
-                  :forward, :backward, :turn_left, :turn_right, :reset_watchdog, :led].freeze
+                  :forward, :backward, :turn_left, :turn_right, :reset_watchdog, :led, :animate].freeze
 
       def start(nav=nil)
         connection.start(false) # send false, so Argus does not use NavMonitor
