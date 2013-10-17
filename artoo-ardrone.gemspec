@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "artoo-ardrone"
   s.version     = Artoo::Ardrone::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Ron Evans", "Adrian Zankich"]
+  s.authors     = ["Ron Evans", "Adrian Zankich", "Julian Cheal", "Joe Merante", "Benjamin Abruzzo"]
   s.email       = ["artoo@hybridgroup.com"]
   s.homepage    = "https://github.com/hybridgroup/artoo-ardrone"
   s.summary     = %q{Artoo adaptor and driver for Parrot ARDrone 2.0}
