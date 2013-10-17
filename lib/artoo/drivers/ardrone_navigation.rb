@@ -46,7 +46,6 @@ module Artoo
       end
 
       def emergency_landing?
-        #@emergency_landing = false if @emergency_landing.nil?
         @emergency_landing
       end
     end
