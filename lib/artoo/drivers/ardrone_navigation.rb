@@ -24,7 +24,7 @@ module Artoo
         return unless navdata
 
         @emergency_landing = navdata.emergency_landing?
-puts @emergency_landing
+
         navdata.options.each do |opt|
           n = navdata.clone
           n.options = opt
