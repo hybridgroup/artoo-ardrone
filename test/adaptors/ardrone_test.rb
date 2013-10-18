@@ -17,6 +17,7 @@ describe Artoo::Adaptors::Ardrone do
   it 'Artoo::Adaptors::Ardrone#disconnect' do
     @adaptor.connect
 
+    @ardrone.expects(:land)
     @ardrone.expects(:stop)
     @adaptor.disconnect
     @adaptor.connected?.must_equal false
