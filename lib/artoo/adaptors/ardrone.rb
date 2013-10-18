@@ -5,16 +5,7 @@ module Artoo
     # This class connects to a ARDrone 2.0
     # @see http://rubydoc.info/gems/hybridgroup-argus/0.2.0/Argus/Drone Argus Drone Documentation
     class Ardrone < Adaptor
-      finalizer :finalize
       attr_reader :ardrone
-
-      # Finalizes connection with ARDrone by landing and stopping the device
-      def finalize
-        if connected?
-          ardrone.land
-          ardrone.stop
-        end
-      end
 
       # Creates Argus Drone connection with device
       # @return [Boolean]
@@ -27,6 +18,7 @@ module Artoo
       # Disconnects device by stopping it and ending connection
       # @return [Boolean]
       def disconnect
+        ardrone.land
         ardrone.stop
         super
       end
