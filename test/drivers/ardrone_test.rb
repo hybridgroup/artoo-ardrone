@@ -9,10 +9,17 @@ describe Artoo::Drivers::Ardrone do
     @device.stubs(:connection).returns(@connection)
   end
 
-  it 'Ardrone#start with nav' do
-  	@connection.expects(:start).with(true)
-  	@device.expects(:start_with_nav).with(true)
-  	@driver.start(true)
-  end
+  describe 'Ardrone#start' do
+    it 'it starts without nav when nav is nil' do
+    	@connection.expects(:start).with(false)
+    	@device.expects(:event_topic_name).with("ready").returns("hi_ready")
+    	@driver.start(false)
+    end
 
+    it 'it starts with nav when nav is not nil' do
+    	@connection.expects(:start).with(false)
+    	@driver.stubs(:start_with_nav).returns([])
+    	@driver.start(true)
+    end
+  end
 end
