@@ -7,7 +7,7 @@ connection :joystick, :adaptor => :joystick
 device :controller, :driver => :ps3, :connection => :joystick, :interval => 0.01
 
 OFFSETS = {
-  :dx => 32767.0,
+  :dx => 32767.0
 }
 @toggle_camera = 0
 
@@ -30,9 +30,9 @@ work do
 
   on controller, :joystick_0 => proc { |*value|
     pair = value[1]
-    if pair[:y] > 0
+    if pair[:y] < 0
       drone.forward(validate_pitch(pair[:y], OFFSETS[:dx]))
-    elsif pair[:y] < 0
+    elsif pair[:y] > 0
       drone.backward(validate_pitch(pair[:y], OFFSETS[:dx]))
     else
       drone.forward(0.0)
@@ -49,23 +49,21 @@ work do
 
   on controller, :joystick_1 => proc { |*value|
     pair = value[1]
-    if pair[:y] > 0
+    if pair[:y] < 0
       drone.up(validate_pitch(pair[:y], OFFSETS[:dx]))
-    elsif pair[:y] < 0
+    elsif pair[:y] > 0
       drone.down(validate_pitch(pair[:y], OFFSETS[:dx]))
     else
       drone.up(0.0)
     end
-  }
 
-  on controller, :button_r1 => proc { |*value|
-    drone.turn_right(0.5)
-    after(0.3.seconds) {drone.turn_right(0.0)}
-  }
-
-  on controller, :button_l1 => proc { |*value|
-    drone.turn_left(0.5)
-    after(0.3.seconds) {drone.turn_left(0.0)}
+    if pair[:x] > 0
+      drone.turn_right(validate_pitch(pair[:x], OFFSETS[:dx]))
+    elsif pair[:x] < 0
+      drone.turn_left(validate_pitch(pair[:x], OFFSETS[:dx]))
+    else
+      drone.turn_right(0.0)
+    end
   }
 end
 
