@@ -41,8 +41,14 @@ describe Artoo::Drivers::ArdroneNavigation do
   end
 
   describe 'ArdroneNavigation#emergency_landing?' do
-    it 'returns emergency_landing value' do
-      @driver.emergency_landing?
+    it 'returns emergency_landing value true when true' do
+      @driver.instance_variable_set(:@emergency_landing, true)
+      @driver.emergency_landing?.must_equal true
+    end
+
+    it 'returns emergency_landing value false when false' do
+      @driver.instance_variable_set(:@emergency_landing, false)
+      @driver.emergency_landing?.must_equal false
     end
   end
 end
