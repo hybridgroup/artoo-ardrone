@@ -2,6 +2,12 @@
 
 ## emergency_landing?
 
-Public: Text here
+Text here
 
-** Returns nil **
+##### Params
+
+`no params`
+
+##### Returns
+
+`` 
