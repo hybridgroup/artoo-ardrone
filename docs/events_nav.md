@@ -7,6 +7,7 @@ Starts the driver
 ## navdata
 
 Gets triggered every time interval amount of time passes, returns and lets you access a NavData object containing the attributes described below:
+
 - navdata.sequence_number → String (returns the sequence number)
 - navdata.vision_flag → String (returns the sequence number)
 - navdata.flying? → Boolean (is the ardrone flying?)
@@ -17,6 +18,7 @@ Gets triggered every time interval amount of time passes, returns and lets you a
 ## demo
 
 Gets triggered every time interval amount of time passes, returns and lets you access a NavOptionDemo object containing navigation data as described below:
+
 - nav_option_demo.control_state_name → String (returns control state name)
 - nav_option_demo.control_state → Integer (returns control state)
 - nav_option_demo.battery_level → Integer
@@ -31,6 +33,7 @@ Gets triggered every time interval amount of time passes, returns and lets you a
 ## vision_detect
 
 Gets triggered every time interval amount of time passes, returns and lets you access a NavOptionVisionDetect object containing the following data:
+
 - nav_option_vision_detect.detected_count → Integer (Number of devices detected)
 - nav_option_vision_detect.type → String
 - nav_option_vision_detect.name → String
